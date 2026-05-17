@@ -1,4 +1,25 @@
 {% extends "blog/base.html" %}
 {% block content %}
 	<h1>About Page</h1>
+	<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testModal">
+	  Open Modal
+	</button>
+
+	<div class="modal fade" id="testModal" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">Bootstrap JS Working</h5>
+
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+
+				<div class="modal-body">
+					Your Bootstrap JavaScript is working correctly.
+				</div>
+
+			</div>
+		</div>
+	</div>
 {% endblock content %}
