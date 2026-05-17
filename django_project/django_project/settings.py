@@ -39,12 +39,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 INTERNAL_IPS = ('127.0.0.1', 'localhost:8000')
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -101,6 +96,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+POSTGRES_LOCALLY = False
+if ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:
+    DATABASES['default'] = dj_database_url.parse(env('DATABASE_URL'))
 
 
 # Password validation
