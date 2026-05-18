@@ -35,7 +35,7 @@ if ENVIRONMENT == 'development':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://django-blog-9q0h.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'django-blog-9q0h.onrender.com']
 
 CSRF_TRUSTED_ORIGINS = ['https://django-blog-9q0h.onrender.com']
 
